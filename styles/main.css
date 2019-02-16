@@ -41,7 +41,8 @@
  }
  
  aside .material-icons {
-   color: #727272;
+   /*color: #727272;*/
+   color: #A02020;
    font-size: 28px;
    position: relative;
    top: -2px;
@@ -52,7 +53,7 @@
  
  .back {float: left;}
  
- #site-header, #filter {background-color: #3367D6;}
+ #site-header, #filter {background-color: #A02020;}
  
  #generic-header button {color: black;}
 

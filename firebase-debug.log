@@ -1,0 +1,25 @@
+[debug] [2019-02-16T22:50:01.197Z] ----------------------------------------------------------------------
+[debug] [2019-02-16T22:50:01.202Z] Command:       /usr/local/Cellar/node/11.10.0/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2019-02-16T22:50:01.202Z] CLI Version:   6.3.1
+[debug] [2019-02-16T22:50:01.203Z] Platform:      darwin
+[debug] [2019-02-16T22:50:01.203Z] Node Version:  v11.10.0
+[debug] [2019-02-16T22:50:01.206Z] Time:          Sat Feb 16 2019 14:50:01 GMT-0800 (Pacific Standard Time)
+[debug] [2019-02-16T22:50:01.207Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-16T22:50:01.241Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-16T22:50:01.242Z] > authorizing via signed-in user
+[debug] [2019-02-16T22:50:01.242Z] [iam] checking project friendlyeats-dd13c for permissions ["firebase.projects.get"]
+[debug] [2019-02-16T22:50:01.246Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-dd13c:testIamPermissions  
+
+[debug] [2019-02-16T22:50:01.551Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-16T22:50:01.554Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlyeats-dd13c  
+ 
+[debug] [2019-02-16T22:50:01.799Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/qdouasbi/Desktop/FoodyCall'...
+[info] 
+[debug] [2019-02-16T22:50:01.803Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1009115611963/clients/_:getWebAppConfig  
+ 
+[debug] [2019-02-16T22:50:02.004Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
