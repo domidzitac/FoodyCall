@@ -17,12 +17,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Learn how to use the Firebase platform on the Web">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foody Call</title>
-
+<!--   <title>Foody Call</title>
+ -->
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-  <link rel="icon" href="images/favicon.ico">
-
+<!--   <link rel="icon" href="images/favicon.ico">
+ -->
   <!-- Web Application Manifest -->
   <link rel="manifest" href="manifest.json">
 
@@ -60,22 +60,27 @@
   <div class="dialogs"></div>
 
 
-
-
   <div hidden class="template" id="header-base">
       <header id="site-header" class="mdc-toolbar mdc-toolbar--fixed">
         <div id="title" class="mdc-toolbar__row mdc-layout-grid">
           <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <img class="guy" src="images/foody-call-logo.png" width="2133" height="758" />
             <span class="material-icons mdc-toolbar__icon--menu">restaurant</span>
-            <span class="mdc-toolbar__title">Foody Calls</span>
-            <button onclick='' class="btn"><i class="material-icons">home</i></button>
-            <button onclick='' class="btn"><i class="material-icons">face</i></button>
-            <button onclick='mainApp.logout()' class="btn"><i class="material-icons">power_settings_new</i></button>
-            <button id="updateDataBtn" onclick='updateData()'>Change Info</button>
             <a href="upload_file.html"><button>Upload Photo</button></a>
-          </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
+
+    <!-- Navigation Bar -->
+    <div class="fp-tab mdl-layout__header-row mdl-cell--hide-phone mdl-color--light-blue-700">
+      <div class="mdl-tab">
+        <a href="main.html" id="fp-menu-home" class="mdl-layout__tab fp-signed-in-only is-active mdl-button mdl-js-button"><i class="material-icons">home</i>Home</a>
+        <a href="main.html" id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">face</i>Profile</a>
+        <a onclick='updateData()' id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">cached</i>Update Data</a>
+        <a onclick='mainApp.logout()' id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">power_settings_new</i>Log out</a>
+      </div>
+    </div>
+  </header>
+
 
       </header>
   </div>
@@ -196,20 +201,13 @@
     <div class="location-card mdc-card mdc-shadow--2dp" data-fir-click="go_to_user">
       <div class="mdc-card__title" data-fir-style="backgroundImage:photo"></div>
       <div class="mdc-card__supporting-text">
-        <h2 data-fir-content="UserName">...</h2>
         <span class="info price"></span>
+        <h2 data-fir-content="UserName">...</h2>
+        <br><br>
+        <br> Cooking <br>
         <div class="details">
-          <img class="guy" src="/images/icons/chef_hat.svg" height="25" />
-          <div class="rating"></div>
-          <img class="guy" src="/images/icons/fork.svg" height="25" />
           <div class="rating"></div>
         </div>
-        <div class="details">
-          <span class="info" data-fir-content="category"></span>
-          <span class="light">●</span>
-          <span class="info" data-fir-content="city"></span>
-        </div>
-
       </div>
     </div>
   </div>
