@@ -76,7 +76,7 @@ Users.prototype.initRouter = function() {
 };
 
 Users.prototype.getCleanPath = function(dirtyPath) {
-  if (dirtyPath.startsWith('/index.html')) {
+  if (dirtyPath.startsWith('/main.html')) {
     return dirtyPath.split('/').slice(1).join('/');
   } else {
     return dirtyPath;
