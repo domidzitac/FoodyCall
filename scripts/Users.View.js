@@ -308,11 +308,13 @@ Users.prototype.updateQuery = function(filters) {
   this.viewList(filters, query_description);
 };
 
-Users.prototype.viewRestaurant = function(id) {
+Users.prototype.viewUser = function(id) {
   var sectionHeaderEl;
 
   var that = this;
-  return this.getRestaurant(id)
+  console.log("user id -->") 
+  console.log(this.getAllUsers(id)) 
+  return this.getAllUsers(id)
     .then(function(doc) {
       var data = doc.data();
       var dialog =  that.dialogs.add_review;
