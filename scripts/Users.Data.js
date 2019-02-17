@@ -24,7 +24,7 @@
 Users.prototype.getAllUsers = function(renderer) {
   var query = firebase.firestore()
       .collection('Users')
-      .limit(50);
+      .limit(10);
       console.log(query)
       console.log("debug --> in Users.prototype.getAllUsers")
 
