@@ -41,7 +41,7 @@ var collection = firebase.firestore().collection('Users');
     
   }else{
 
-  	window.location.replace("main.html")
+  	window.location.replace("index.html")
 
   	uid = null;
   }
