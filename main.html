@@ -52,12 +52,17 @@
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+
+
 <div id="ListUsers">
   <div class="header"></div>
 
   <main></main>
 
   <div class="dialogs"></div>
+
+
+
 
   <div hidden class="template" id="header-base">
       <header id="site-header" class="mdc-toolbar mdc-toolbar--fixed">
@@ -68,15 +73,15 @@
             <button onclick='' class="btn"><i class="material-icons">home</i></button>
             <button onclick='' class="btn"><i class="material-icons">face</i></button>
             <button onclick='mainApp.logout()' class="btn"><i class="material-icons">power_settings_new</i></button>
-
-
-
+            <h1 id="userfield">I am logged in:</h1>
           </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
 
       </header>
   </div>
+
+
 
   <div hidden class="template" id="main-adjusted">
     <div id="message-cards-container" class="mdc-layout-grid mdc-toolbar-fixed-adjust">
@@ -112,13 +117,13 @@
 
   <div hidden class="template" id="no-ratings">
       <div id="guy-container" class="mdc-toolbar-fixed-adjust">
-        <img class="guy" src="/images/guy_fireats.png" />
+        <img class="guy" src="/images/default_cook.jpg" />
         <div class="text">
-          This restaurant has no ratings.<br />
+          This user has no available description motherfucker!.<br />
         </div>
         <br />
         <a class="mdc-button" data-fir-click="add_mock_data">
-          Add mock ratings
+          Click on that button to go and fuck yourself, but with dignity and grace (of course).
         </a>
       </div>
     </div>
