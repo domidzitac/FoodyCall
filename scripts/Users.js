@@ -43,6 +43,7 @@ Users.prototype.initRouter = function() {
     })
     .on({
       '/setup': function() {
+        console.log("debug --> Users.prototype.initRouter /setup ")
         that.viewSetup();
       }
     })
@@ -65,9 +66,12 @@ Users.prototype.initRouter = function() {
     .collection('Users')
     .limit(1)
     .onSnapshot(function(snapshot) {
+      console.log(".onSnapshot")
       if (snapshot.empty) {
+        console.log("snapshot.empty")
         that.router.navigate('/setup');
       }
+      console.log("")
     });
 };
 
@@ -187,5 +191,6 @@ Users.prototype.data = {
 };
 
 window.onload = function() {
+  console.log("window.onload")
   window.app = new Users();
 };

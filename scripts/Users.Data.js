@@ -54,8 +54,8 @@ Users.prototype.getDocumentsInQuery = function(query, renderer) {
   });
 };
 
-Users.prototype.getRestaurant = function(id) {
-  console.log("debug --> in Users.prototype.getRestaurant: ")
+Users.prototype.getUser = function(id) {
+  console.log("debug --> in Users.prototype.getUser ")
   console.log(firebase.firestore().collection('Users').doc(id).get())
     return firebase.firestore().collection('Users').doc(id).get();
 };

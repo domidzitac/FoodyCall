@@ -66,12 +66,12 @@ Users.prototype.viewList = function(filters, filter_description) {
     display: function(doc) {
       var data = doc.data();
       data['.id'] = doc.id;
-      data['go_to_restaurant'] = function() {
+      data['go_to_user'] = function() {
         that.router.navigate('/Users/' + doc.id);
       };
   
       var el = that.renderTemplate('restaurant-card', data);
-      el.querySelector('.rating').append(that.renderRating(data.avgRating));
+      el.querySelector('.rating').append(that.renderRating(data.EatRating));
       el.querySelector('.price').append(that.renderPrice(data.price));
       // Setting the id allows to locating the individual restaurant card
       el.querySelector('.location-card').id = 'doc-' + doc.id;
@@ -311,12 +311,13 @@ Users.prototype.updateQuery = function(filters) {
 };
 
 Users.prototype.viewUser = function(id) {
+  console.log("viewUser")
   var sectionHeaderEl;
 
   var that = this;
   console.log("user id -->") 
-  console.log(this.getAllUsers(id)) 
-  return this.getRestaurant(id)
+  console.log(id) 
+  return this.getUser(id)
     .then(function(doc) {
       var data = doc.data();
       var dialog =  that.dialogs.add_review;
@@ -334,7 +335,8 @@ Users.prototype.viewUser = function(id) {
       sectionHeaderEl = that.renderTemplate('restaurant-header', data);
       sectionHeaderEl
         .querySelector('.rating')
-        .append(that.renderRating(data.avgRating));
+        .append(that.renderRating(data.EatRating));
+      console.log(data.EatRating)
 
       sectionHeaderEl
         .querySelector('.price')
@@ -345,6 +347,7 @@ Users.prototype.viewUser = function(id) {
       var mainEl;
 
       if (ratings.size) {
+        console.log(ratings)
         mainEl = that.renderTemplate('main');
 
         ratings.forEach(function(rating) {
@@ -371,7 +374,7 @@ Users.prototype.viewUser = function(id) {
       that.replaceElement(document.querySelector('main'), mainEl);
     })
     .then(function() {
-      that.router.updatePageLinks();
+      that.router.updatePageLinks()
     })
     .catch(function(err) {
       console.warn('Error rendering page', err);
