@@ -36,6 +36,7 @@
         "mdc": true,
         "importScripts": true,
         "FriendlyEats": true,
+        "Users": true,
         "firebase": true,
         "Promise": true
     }

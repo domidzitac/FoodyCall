@@ -23,5 +23,8 @@ service cloud.firestore {
         
         }
     }
+    match /Users/{UserId} {
+      allow read, write;
+      }
   }
 }
