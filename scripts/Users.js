@@ -17,14 +17,11 @@ function Users() {
   firebase.firestore().settings({ timestampsInSnapshots: true });
 
   var that = this;
-  firebase.auth().signInAnonymously().then(function() {
-    that.initTemplates();
-    that.initRouter();
-    that.initReviewDialog();
-    that.initFilterDialog();
-  }).catch(function(err) {
-    console.log(err);
-  });
+  this.initTemplates();
+  this.initRouter();
+  this.initReviewDialog();
+  this.initFilterDialog();
+  
 }
 
 /**

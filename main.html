@@ -52,12 +52,17 @@
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+
+
 <div id="ListUsers">
   <div class="header"></div>
   
   <main></main>
 
   <div class="dialogs"></div>
+
+
+
 
   <div hidden class="template" id="header-base">
       <header id="site-header" class="mdc-toolbar mdc-toolbar--fixed">
@@ -66,11 +71,14 @@
             <span class="material-icons mdc-toolbar__icon--menu">restaurant</span>
             <span class="mdc-toolbar__title">Foody Calls</span>
             <button onclick='mainApp.logout()'>Logout</button>
+            <h1 id="userfield">I am logged in:</h1>
           </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
       </header>
   </div>
+
+
 
   <div hidden class="template" id="main-adjusted">
     <div id="message-cards-container" class="mdc-layout-grid mdc-toolbar-fixed-adjust">
