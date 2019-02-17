@@ -25,6 +25,7 @@ Users.prototype.initTemplates = function() {
 };
 
 Users.prototype.viewHome = function() {
+  console.log("debug --> in viewHome")
   this.getAllUsers();
 };
 
@@ -66,7 +67,7 @@ Users.prototype.viewList = function(filters, filter_description) {
       var data = doc.data();
       data['.id'] = doc.id;
       data['go_to_restaurant'] = function() {
-        that.router.navigate('/restaurants/' + doc.id);
+        that.router.navigate('/Users/' + doc.id);
       };
   
       var el = that.renderTemplate('restaurant-card', data);
@@ -117,6 +118,7 @@ Users.prototype.viewList = function(filters, filter_description) {
       sort: filters.sort
     }, renderer);
   } else {
+    console.log("debug --> in viewList")
     this.getAllUsers(renderer);
   }
 
@@ -157,7 +159,7 @@ Users.prototype.viewSetup = function() {
 
   firebase
     .firestore()
-    .collection('restaurants')
+    .collection('Users')
     .limit(1)
     .onSnapshot(function(snapshot) {
       if (snapshot.size && !addingMockData) {
@@ -314,7 +316,7 @@ Users.prototype.viewUser = function(id) {
   var that = this;
   console.log("user id -->") 
   console.log(this.getAllUsers(id)) 
-  return this.getAllUsers(id)
+  return this.getRestaurant(id)
     .then(function(doc) {
       var data = doc.data();
       var dialog =  that.dialogs.add_review;

@@ -25,15 +25,21 @@ Users.prototype.getAllUsers = function(renderer) {
   var query = firebase.firestore()
       .collection('Users')
       .limit(50);
+      console.log(query)
       console.log("debug --> in Users.prototype.getAllUsers")
 
   this.getDocumentsInQuery(query, renderer);
+
+  console.log("debug --> after getDocumentsInQuery")
 };
 
 Users.prototype.getDocumentsInQuery = function(query, renderer) {
   console.log("debug --> in Users.getDocumentsInQuery")
   query.onSnapshot(function(snapshot) {
-    if (!snapshot.size) return renderer.empty(); // Display "There are no restaurants".
+    if (!snapshot.size) {
+    console.log("debug --> no 'restaurants' found")
+    return renderer.empty(); // Display "There are no restaurants".
+    }
 
     console.log("debug --> in snapshot")
     snapshot.docChanges().forEach(function(change) {
