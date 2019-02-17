@@ -17,12 +17,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Learn how to use the Firebase platform on the Web">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foody Call</title>
-
+<!--   <title>Foody Call</title>
+ -->
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-  <link rel="icon" href="images/favicon.ico">
-
+<!--   <link rel="icon" href="images/favicon.ico">
+ -->
   <!-- Web Application Manifest -->
   <link rel="manifest" href="manifest.json">
 
@@ -65,18 +65,22 @@
         <div id="title" class="mdc-toolbar__row mdc-layout-grid">
           <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
       <img class="guy" src="images/foody-call-logo.png" width="2133" height="758" />
-         </section>
+            <span class="material-icons mdc-toolbar__icon--menu">restaurant</span>
+<!--             <button onclick='' class="btn"><i class="material-icons">home</i></button>
+            <button onclick='' class="btn"><i class="material-icons">face</i></button>
+            <button onclick='mainApp.logout()' class="btn"><i class="material-icons">power_settings_new</i></button>
+            <button id="updateDataBtn" onclick='updateData()'>Change Info</button>
+ -->          </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
 
     <!-- Navigation Bar -->
     <div class="fp-tab mdl-layout__header-row mdl-cell--hide-phone mdl-color--light-blue-700">
       <div class="mdl-tab">
-        <a href="/home" id="fp-menu-home" class="mdl-layout__tab fp-signed-in-only is-active mdl-button mdl-js-button"><i class="material-icons">home</i>Home</a>
-        <a href="/recent" id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">face</i>Profile</a>
-        <a href="/recent" id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">power_settings_new</i>Log out</a>
-        <input id="fp-mediacapture" type="file" accept="image/*" capture="camera">
-        <label id="fp-mediacapture-label" for="fp-mediacapture">Upload an image</label>
+        <a href="main.html" id="fp-menu-home" class="mdl-layout__tab fp-signed-in-only is-active mdl-button mdl-js-button"><i class="material-icons">home</i>Home</a>
+        <a href="main.html" id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">face</i>Profile</a>
+        <a onclick='updateData()' id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">cached</i>Update Data</a>
+        <a onclick='mainApp.logout()' id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">power_settings_new</i>Log out</a>
       </div>
     </div>
   </header>
@@ -115,9 +119,9 @@
   </div>
 
 
-  <button type="button" id="gotoSignupBtn" onclick="pullSignUp()">Register, bitch!</button>
   <h5 align="right" id="userfield">I am logged in:</h5>
-
+ <!--  <button type="button" id="gotoSignupBtn" onclick="pullSignUp()">Register, bitch!</button> -->
+  
 
 
   <div hidden class="template" id="no-ratings">
@@ -370,46 +374,6 @@
     </div>
     <div class="mdc-dialog__backdrop"></div>
   </aside>
-</div>
-
-
-
-<!-- Registration form -->
-<div id="container_demo" style='visibility:hidden'>
-
-
-    <div id="register" class="animate form">
-      <form  id="add-user" action="mysuperscript.php" autocomplete="on">
-        <h1> Let's get to know each other! </h1>
-        <p>
-          <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-          <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
-        </p>
-        <p>
-          <label for="zipsignup" class="zipsignup" data-icon="e" > Your ZIP</label>
-          <input id="zipsignup" name="zipsignup" required="required" type="text" placeholder="12345"/>
-        </p>
-        <p>
-          <label for="firstnamesignup" class="uname" data-icon="u">First Name</label>
-          <input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="Nikolas" />
-        </p>
-        <p>
-          <label for="lastnamesignup" class="uname" data-icon="u">Last Name</label>
-          <input id="lastnamesignup" name="lastnamesignup" required="required" type="text" placeholder="Doe" />
-        </p>
-       <!--  <p class="signin button">
-          <input type="submit" value="Sign up"/>
-        </p> -->
-        <p class="change_link">
-          Already a member ?
-          <a href="#tologin" class="to_register"> Go and log in </a>
-        </p>
-
-      </form>
-      <button type="button" id="signupBtn" onclick="submitClick()" style='visibility:hidden'>Complete Registration!</button>
-    </div>
-
-  </div>
 </div>
 
 
