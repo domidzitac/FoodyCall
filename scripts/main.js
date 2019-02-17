@@ -1,7 +1,8 @@
 var mainApp = {};
 var textBox = document.getElementById("userfield");
 var collection = firebase.firestore().collection('Users');
-var gotoSignupBtn = document.getElementById("gotoSignupBtn");
+//var gotoSignupBtn = document.getElementById("gotoSignupBtn");
+var updateDataBtn = document.getElementById("updateDataBtn");
 
 (function(){
   var firebase = app_firebase;
@@ -72,3 +73,9 @@ var gotoSignupBtn = document.getElementById("gotoSignupBtn");
 })()
 
 
+function updateData() {
+
+// go to main
+  window.location.replace("signup.html")
+
+}
