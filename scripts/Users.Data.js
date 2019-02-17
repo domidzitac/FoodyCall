@@ -21,7 +21,7 @@
 //   return collection.add(data);
 // };
 
-Users.prototype.getAllRestaurants = function(renderer) {
+Users.prototype.getAllUsers = function(renderer) {
   var query = firebase.firestore()
       .collection('Users')
       .limit(50);

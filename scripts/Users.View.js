@@ -25,7 +25,7 @@ Users.prototype.initTemplates = function() {
 };
 
 Users.prototype.viewHome = function() {
-  this.getAllRestaurants();
+  this.getAllUsers();
 };
 
 Users.prototype.viewList = function(filters, filter_description) {
@@ -117,7 +117,7 @@ Users.prototype.viewList = function(filters, filter_description) {
       sort: filters.sort
     }, renderer);
   } else {
-    this.getAllRestaurants(renderer);
+    this.getAllUsers(renderer);
   }
 
   var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
