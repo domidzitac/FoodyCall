@@ -4,19 +4,29 @@
 	<meta charset=utf-8>
 	<meta name=description content="">
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<title>Login Page</title>
+	<title>Foody</title>
 	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
-
+  <!-- Material Design Components -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/material-components-web@0.39.3/dist/material-components-web.min.css">
+  <script src="https://unpkg.com/material-components-web@0.39.3/dist/material-components-web.js"></script>
 
 </head>
-<body>
-	<h1>Welcome to FoodyCall</h1>
+<body bgcolor="#A02020">
+
+<!-- Splash screen -->
+<section id="page-splash">
+  <center>
+  <h3 class="fp-logo"><img src="images/foody-call-logo.png" alt="Logo" height="200"></h3>
+  </center>
+  <div class="fp-signed-out-only fp-initially-hidden">
+</section>
+
 	<div id="firebaseui-auth-container"></div>
 	<div id="loader">Loading...</div>
-
 
 	<script src="scripts/firebase.js"></script>
 	<script src="scripts/login.js"></script>
