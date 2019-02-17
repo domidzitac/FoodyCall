@@ -4,6 +4,14 @@
  var uiConfig = {
   callbacks: {
     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+     
+      firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+        
+                console.log(idToken)
+            }).catch(function(error) {
+              
+                console.error(error);
+            });
       // User successfully signed in.
       // Return type determines whether we continue the redirect automatically
       // or whether we leave that to developer to handle.
@@ -32,9 +40,11 @@
   // Privacy policy url.
   privacyPolicyUrl: '<your-privacy-policy-url>'
 };
-
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
   
 })()
+
+
+

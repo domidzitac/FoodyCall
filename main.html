@@ -52,12 +52,15 @@
   <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+
+
 <div id="ListUsers">
   <div class="header"></div>
-  
   <main></main>
-
   <div class="dialogs"></div>
+
+
+
 
   <div hidden class="template" id="header-base">
       <header id="site-header" class="mdc-toolbar mdc-toolbar--fixed">
@@ -65,13 +68,19 @@
           <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
             <span class="material-icons mdc-toolbar__icon--menu">restaurant</span>
             <span class="mdc-toolbar__title">Foody Calls</span>
-            <button onclick='mainApp.logout()'>Logout</button>
+            <button onclick='' class="btn"><i class="material-icons">home</i></button>
+            <button onclick='' class="btn"><i class="material-icons">face</i></button>
+            <button onclick='mainApp.logout()' class="btn"><i class="material-icons">power_settings_new</i></button>
+            <button id="updateDataBtn" onclick='updateData()'>Change Info</button>
             <a href="upload_file.html"><button>Upload Photo</button></a>
           </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
+
       </header>
   </div>
+
+
 
   <div hidden class="template" id="main-adjusted">
     <div id="message-cards-container" class="mdc-layout-grid mdc-toolbar-fixed-adjust">
@@ -101,19 +110,20 @@
   </div>
 
 
-  <button type="button" id="gotoSignupBtn" onclick="pullSignUp()">Register, bitch!</button>
+  <h5 align="right" id="userfield">I am logged in:</h5>
+ <!--  <button type="button" id="gotoSignupBtn" onclick="pullSignUp()">Register, bitch!</button> -->
   
 
 
   <div hidden class="template" id="no-ratings">
       <div id="guy-container" class="mdc-toolbar-fixed-adjust">
-        <img class="guy" src="/images/guy_fireats.png" />
+        <img class="guy" src="/images/default_cook.jpg" />
         <div class="text">
-          This restaurant has no ratings.<br />
+          This user has no available description motherfucker!.<br />
         </div>
         <br />
         <a class="mdc-button" data-fir-click="add_mock_data">
-          Add mock ratings
+          Click on that button to go and fuck yourself, but with dignity and grace (of course).
         </a>
       </div>
     </div>
@@ -358,46 +368,6 @@
     <div class="mdc-dialog__backdrop"></div>
   </aside>
 </div>
-
-
-
-<!-- Registration form -->
-<div id="container_demo" style='visibility:hidden'>
-  
-
-    <div id="register" class="animate form">
-      <form  id="add-user" action="mysuperscript.php" autocomplete="on"> 
-        <h1> Let's get to know each other! </h1> 
-        <p> 
-          <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-          <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
-        </p>
-        <p> 
-          <label for="zipsignup" class="zipsignup" data-icon="e" > Your ZIP</label>
-          <input id="zipsignup" name="zipsignup" required="required" type="text" placeholder="12345"/> 
-        </p>
-        <p>
-          <label for="firstnamesignup" class="uname" data-icon="u">First Name</label>
-          <input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="Nikolas" />
-        </p>
-        <p>
-          <label for="lastnamesignup" class="uname" data-icon="u">Last Name</label>
-          <input id="lastnamesignup" name="lastnamesignup" required="required" type="text" placeholder="Doe" />
-        </p>
-       <!--  <p class="signin button"> 
-          <input type="submit" value="Sign up"/> 
-        </p> -->
-        <p class="change_link">  
-          Already a member ?
-          <a href="#tologin" class="to_register"> Go and log in </a>
-        </p>
-        
-      </form>
-      <button type="button" id="signupBtn" onclick="submitClick()" style='visibility:hidden'>Complete Registration!</button>
-    </div>
-    
-  </div>
-</div>  
 
 
 <script src="/__/firebase/5.7.3/firebase-app.js"></script>
