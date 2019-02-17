@@ -1,6 +1,7 @@
 var mainApp = {};
 var textBox = document.getElementById("userfield");
 var collection = firebase.firestore().collection('Users');
+var gotoSignupBtn = document.getElementById("gotoSignupBtn");
 
 (function(){
   var firebase = app_firebase;
@@ -23,12 +24,26 @@ var collection = firebase.firestore().collection('Users');
     if (docData.exists) {
       console.log('User already there')
     } else {
+      console.log('User not there')
       // Create new User in the Firecloud database
       collection.doc(uid).set({
       UserID: uid,
       email: user.email,
       UserName: user.displayName
       });
+      console.log('try new window')
+
+      // stall
+      //var i;
+      //for (i = 0; i < 1000000; i++) { 
+      //  var j = 2*i;
+      //  console.log(j)
+      //}
+      // move user to thr sign-up menu, to input info
+      window.location.replace("signup.html");
+      return;
+      console.log('in new window?')
+
     }
   }).catch((fail) => {
     // Either
@@ -55,4 +70,5 @@ var collection = firebase.firestore().collection('Users');
   mainApp.logout = logout;
 
 })()
+
 
