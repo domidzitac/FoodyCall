@@ -8,7 +8,7 @@ var mainApp = {};
     // User is signed in.
     uid = user.uid;
   }else{
-  	window.location.replace("index.html")
+  	window.location.replace("main.html")
   	uid = null;
   }
   });
