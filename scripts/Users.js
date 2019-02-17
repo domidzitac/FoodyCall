@@ -34,6 +34,7 @@ Users.prototype.initRouter = function() {
   this.router = new Navigo();
 
   var that = this;
+  console.log("debug --> Users.prototype.initRouter ")
   this.router
     .on({
       '/': function() {
@@ -46,17 +47,22 @@ Users.prototype.initRouter = function() {
       }
     })
     .on({
-      '/restaurants/*': function() {
+      '/Users/*': function() {
+        console.log("debug --> Users.prototype.initRouter /Users ")
         var path = that.getCleanPath(document.location.pathname);
+        console.log("path")
+        console.log(path)
         var id = path.split('/')[2];
-        that.viewRestaurant(id);
+        console.log("id")
+        console.log(id)
+        that.viewUser(id);
       }
     })
     .resolve();
 
   firebase
     .firestore()
-    .collection('restaurants')
+    .collection('Users')
     .limit(1)
     .onSnapshot(function(snapshot) {
       if (snapshot.empty) {
