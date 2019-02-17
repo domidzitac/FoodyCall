@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+
+
+</head>
+<body>
+	<!-- <h1 id="userfield">I am logged in:</h1> -->
+	<h1>Gimme some info man</h1>
+
+	<!-- Registration form -->
+	<div id="container_demo">
+  
+
+    	<div id="register" class="animate form">
+    	  <form  id="add-user" action="mysuperscript.php" autocomplete="on"> 
+        	<h1> Let's get to know each other! </h1> 
+        	<p> 
+          		<label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+          		<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+        	</p>
+        	<p> 
+          		<label for="zipsignup" class="zipsignup" data-icon="e" > Your ZIP</label>
+          		<input id="zipsignup" name="zipsignup" required="required" type="text" placeholder="12345"/> 
+        	</p>
+        	<p>
+          		<label for="firstnamesignup" class="uname" data-icon="u">First Name</label>
+          		<input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="Nikolas" />
+        	</p>
+        	<p>
+          		<label for="lastnamesignup" class="uname" data-icon="u">Last Name</label>
+          		<input id="lastnamesignup" name="lastnamesignup" required="required" type="text" placeholder="Doe" />
+        	</p>
+       <!--  <p class="signin button"> 
+          <input type="submit" value="Sign up"/> 
+        </p> -->
+        	<p class="change_link">  
+          		Already a member ?
+          		<a href="#tologin" class="to_register"> Go and log in </a>
+        	</p>
+        
+      	</form>
+      <button type="button" id="signupBtn" onclick="submitClick()">Complete Registration!</button>
+    </div>
+     
+
+
+	<script src="scripts/firebase.js"></script>
+	<script src="scripts/Signup.js"></script>
+	 <script src="scripts/main.js"></script> 
+</body>
+</html>

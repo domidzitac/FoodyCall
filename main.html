@@ -71,6 +71,7 @@
             <button onclick='' class="btn"><i class="material-icons">home</i></button>
             <button onclick='' class="btn"><i class="material-icons">face</i></button>
             <button onclick='mainApp.logout()' class="btn"><i class="material-icons">power_settings_new</i></button>
+            <button id="updateDataBtn" onclick='updateData()'>Change Info</button>
           </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
@@ -108,9 +109,9 @@
   </div>
 
 
-  <button type="button" id="gotoSignupBtn" onclick="pullSignUp()">Register, bitch!</button>
   <h5 align="right" id="userfield">I am logged in:</h5>
-
+ <!--  <button type="button" id="gotoSignupBtn" onclick="pullSignUp()">Register, bitch!</button> -->
+  
 
 
   <div hidden class="template" id="no-ratings">
@@ -365,46 +366,6 @@
     </div>
     <div class="mdc-dialog__backdrop"></div>
   </aside>
-</div>
-
-
-
-<!-- Registration form -->
-<div id="container_demo" style='visibility:hidden'>
-
-
-    <div id="register" class="animate form">
-      <form  id="add-user" action="mysuperscript.php" autocomplete="on">
-        <h1> Let's get to know each other! </h1>
-        <p>
-          <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-          <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
-        </p>
-        <p>
-          <label for="zipsignup" class="zipsignup" data-icon="e" > Your ZIP</label>
-          <input id="zipsignup" name="zipsignup" required="required" type="text" placeholder="12345"/>
-        </p>
-        <p>
-          <label for="firstnamesignup" class="uname" data-icon="u">First Name</label>
-          <input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="Nikolas" />
-        </p>
-        <p>
-          <label for="lastnamesignup" class="uname" data-icon="u">Last Name</label>
-          <input id="lastnamesignup" name="lastnamesignup" required="required" type="text" placeholder="Doe" />
-        </p>
-       <!--  <p class="signin button">
-          <input type="submit" value="Sign up"/>
-        </p> -->
-        <p class="change_link">
-          Already a member ?
-          <a href="#tologin" class="to_register"> Go and log in </a>
-        </p>
-
-      </form>
-      <button type="button" id="signupBtn" onclick="submitClick()" style='visibility:hidden'>Complete Registration!</button>
-    </div>
-
-  </div>
 </div>
 
 
