@@ -60,20 +60,27 @@
   <div class="dialogs"></div>
 
 
-
-
   <div hidden class="template" id="header-base">
       <header id="site-header" class="mdc-toolbar mdc-toolbar--fixed">
         <div id="title" class="mdc-toolbar__row mdc-layout-grid">
           <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-            <span class="material-icons mdc-toolbar__icon--menu">restaurant</span>
-            <span class="mdc-toolbar__title">Foody Calls</span>
-            <button onclick='' class="btn"><i class="material-icons">home</i></button>
-            <button onclick='' class="btn"><i class="material-icons">face</i></button>
-            <button onclick='mainApp.logout()' class="btn"><i class="material-icons">power_settings_new</i></button>
-          </section>
+      <img class="guy" src="images/foody-call-logo.png" width="2133" height="758" />
+         </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
+
+    <!-- Navigation Bar -->
+    <div class="fp-tab mdl-layout__header-row mdl-cell--hide-phone mdl-color--light-blue-700">
+      <div class="mdl-tab">
+        <a href="/home" id="fp-menu-home" class="mdl-layout__tab fp-signed-in-only is-active mdl-button mdl-js-button"><i class="material-icons">home</i>Home</a>
+        <a href="/recent" id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">face</i>Profile</a>
+        <a href="/recent" id="fp-menu-feed" class="mdl-layout__tab mdl-button mdl-js-button"><i class="material-icons">power_settings_new</i>Log out</a>
+        <input id="fp-mediacapture" type="file" accept="image/*" capture="camera">
+        <label id="fp-mediacapture-label" for="fp-mediacapture">Upload an image</label>
+      </div>
+    </div>
+  </header>
+
 
       </header>
   </div>
@@ -194,12 +201,10 @@
     <div class="location-card mdc-card mdc-shadow--2dp" data-fir-click="go_to_user">
       <div class="mdc-card__title" data-fir-style="backgroundImage:photo"></div>
       <div class="mdc-card__supporting-text">
-        <h2 data-fir-content="UserName">...</h2>
         <span class="info price"></span>
+        <h2 data-fir-content="UserName">...</h2>
         <div class="details">
-          <img class="guy" src="/images/icons/chef_hat.svg" height="25" />
-          <div class="rating"></div>
-          <img class="guy" src="/images/icons/fork.svg" height="25" />
+          <img src="/images/icons/chef_hat.svg" height="25" />
           <div class="rating"></div>
         </div>
         <div class="details">
